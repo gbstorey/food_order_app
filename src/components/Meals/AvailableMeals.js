@@ -1,5 +1,5 @@
 import classes from "./AvailableMeals.module.css"
-import Card from "../Cart/Card";
+import Card from "../UI/Card";
 import MealItem from "./MealItem";
 
 const DUMMY_MEALS = [
@@ -37,11 +37,12 @@ export default function AvailableMeals() {
 
                 {DUMMY_MEALS.map((meal) => 
                 <MealItem 
+                id={meal.id}
                 key={meal.id} 
                 name={meal.name} 
                 description={meal.description} 
                 price={meal.price} />)}
-                
+
             </ul>
             </Card>
         </section>
