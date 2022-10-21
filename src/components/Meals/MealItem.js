@@ -8,7 +8,8 @@ export default function MealItem(props) {
 
     const price = `$${props.price.toFixed(2)}`;
 
-    const addToCartHandler = amount => {
+    const addToCartHandler = (amount) => {
+        console.log(cartCtx.items)
         cartCtx.addItem({
             id: props.id,
             name: props.name,
